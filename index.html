@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Quiz App</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="start-screen">
+        <h1 class="heading">Jimmy老師的文法題目練習系統</h1>
+        <div class="settings">
+          <label for="user-name">請輸入你的名字:</label>
+          <input type="text" id="user-name"  placeholder="輸入名字" />
+          
+          <label for="num-questions">題目數量:</label>
+          <select id="num-questions">
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="15">15</option>
+            <option value="20">20</option>
+            <option value="50">50</option>
+
+
+          </select>
+          <label for="category">選擇文法:</label>
+          <select id="category">
+            <!--<option value="">隨便</option>-->
+            <option value="HanLinB2L3L4test">翰林版國一上第二次段考</option>
+            <option value="HanLinB4L3L4test">翰林版國二上第二次段考</option>
+
+            <!--<option value="timeDay">What time/day的問法</option>-->
+
+          </select>
+          <!--<label for="difficulty">Select difficulty:</label>
+          <select id="difficulty">
+            <option value="">any difficulty</option>
+            <option value="easy">easy</option>
+            <option value="medium">medium</option>
+            <option value="hard">hard</option>
+          </select>
+          <label for="time">Select time per question:</label>
+          <select id="time">
+            <option value="10">10 seconds</option>
+            <option value="15">15 seconds</option>
+            <option value="20">20 seconds</option>
+            <option value="25">25 seconds</option>
+            <option value="30">30 seconds</option>
+            <option value="60">60 seconds</option>
+          </select>-->
+        </div>
+        <button class="btn start">開始測驗</button>
+      </div>
+      <div class="quiz hide">
+        <div class="timer">
+          <div class="progress">
+            <div class="progress-bar"></div>
+            <span class="progress-text"></span>
+          </div>
+        </div>
+        <div class="question-wrapper">
+          <div class="number">
+            Question <span class="current">1</span>
+            <span class="total">/10</span>
+          </div>
+          <div class="question">This is a question This is a question?</div>
+        </div>
+        <div class="answer-wrapper">
+          <div class="answer selected">
+            <span class="text">answer</span>
+            <span class="checkbox">
+              <i class="fas fa-check"></i>
+            </span>
+          </div>
+        </div>
+        <button class="btn submit" disabled>確定提交</button>
+        <button class="btn next">下一題</button>
+      </div>
+      <div class="end-screen hide">
+        <h1 class="heading">Jimmy老師的文法題目練習系統</h1>
+        <div class="score">
+          <span class="score-text">你的總分:</span>
+          <div>
+            <span class="final-score">0</span>
+            <span class="total-score">/10</span>
+          </div>
+          <div class="user-name-display" style="margin-top: 10px; color: #a2aace; font-size: 16px;"></div>
+
+          <div class="category-display" style="margin-top: 10px; color: #a2aace; font-size: 16px;"></div>
+        </div>
+        <!-- 作答詳情 -->
+        <div class="answer-details" style="margin-top: 20px; color: #fff; font-size: 14px;"></div>
+        <button class="btn restart">重新測驗</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="custom.js"></script>
+
+  </body>
+</html>
